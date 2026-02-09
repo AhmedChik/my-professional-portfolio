@@ -64,6 +64,3 @@ public/                 # Assets statiques
 ## 👤 Auteur
 Ahmed Chikhaoui
 
----
-
-**Construit avec ❤️ pour captiver les recruteurs tech** ⚡
