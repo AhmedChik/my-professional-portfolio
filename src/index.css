@@ -1,0 +1,240 @@
+/* Midnight Tech Blue Palette */
+:root {
+	--text: #E6EAF2;
+	--text-reverse: #0B0F1A;
+	--textDim: #9AA4BF;
+	--background: #0B0F1A;
+	--background-reverse: #E6EAF2;
+	--surface: #12182B;
+	--accent-primary: #4F7CFF;
+	--accent-secondary: #4FD1FF;
+	--scroll-bar: 79, 124, 255;
+	--primary: 79, 124, 255;
+	--primaryBg: rgba(79, 124, 255, 0.08);
+	--primaryHi: rgba(79, 124, 255, 0.15);
+	--primaryFg: #4F7CFF;
+	--secondary: #4FD1FF;
+	--secondaryFg: #4FD1FF;
+	--secondaryBg: rgba(79, 209, 255, 0.08);
+	--secondaryHi: rgba(79, 209, 255, 0.15);
+	--accent: #4F7CFF;
+	--accentBg: rgba(79, 124, 255, 0.08);
+	--accentHi: rgba(79, 124, 255, 0.15);
+}
+
+/* Light Mode - Midnight Tech Blue */
+body.light-mode {
+	--text: #0B0F1A;
+	--text-reverse: #E6EAF2;
+	--textDim: #6B7899;
+	--background: #F0F2F9;
+	--background-reverse: #0B0F1A;
+	--surface: #E8EBF5;
+	--accent-primary: #4F7CFF;
+	--accent-secondary: #4FD1FF;
+	--scroll-bar: 79, 124, 255;
+	--primary: 79, 124, 255;
+	--primaryBg: rgba(79, 124, 255, 0.08);
+	--primaryHi: rgba(79, 124, 255, 0.15);
+	--primaryFg: #4F7CFF;
+	--secondary: #4FD1FF;
+	--secondaryFg: #4FD1FF;
+	--secondaryBg: rgba(79, 209, 255, 0.08);
+	--secondaryHi: rgba(79, 209, 255, 0.15);
+	--accent: #4F7CFF;
+	--accentBg: rgba(79, 124, 255, 0.08);
+	--accentHi: rgba(79, 124, 255, 0.15);
+}
+
+html {
+	scrollbar-width: none;
+	scroll-behavior: smooth !important;
+}
+
+* {
+	cursor: none !important;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Fugaz One', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color: var(--background);
+	color: var(--text);
+	cursor: none;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1600px;
+	margin-inline: auto;
+}
+
+@keyframes anim {
+	0% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(15px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+hr {
+	position: relative;
+	padding: 2.5rem 0;
+	border: none;
+	margin-top: 10px;
+}
+
+hr:before {
+	content: '\2044  \2217\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2013\2217  \2044';
+	position: absolute;
+	top: 1.2rem;
+	right: 0;
+	left: 0;
+	font-size: 1.5em;
+	color: #4F7CFF;
+	text-align: center;
+}
+
+/*
+	* ScrollBar Styling
+*/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll-bar {
+	--p: 0%;
+	position: fixed;
+	width: 7px;
+	height: 7px;
+	right: 0;
+	top: 0;
+	background: rgb(var(--scroll-bar));
+	border-radius: 50%;
+}
+
+/*  TODO Remove before class if scroll tail is not needed */
+.scroll-bar::before {
+	content: '';
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 7px;
+	height: var(--p);
+	background: linear-gradient(0deg, rgb(var(--scroll-bar)), transparent);
+}
+
+.heading {
+	color: #4F7CFF;
+	text-decoration: underline;
+	margin-bottom: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+	body {
+		font-size: 0.95rem;
+	}
+
+	.container {
+		padding: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-size: 0.9rem;
+	}
+
+	.container {
+		padding: 0 0.8rem;
+	}
+
+	hr {
+		padding: 2rem 0;
+	}
+
+	hr:before {
+		font-size: 1.2em;
+	}
+
+	p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.scroll-bar {
+		display: none;
+	}
+
+	body {
+		font-size: 0.85rem;
+	}
+
+	.container {
+		padding: 0 0.5rem;
+	}
+
+	hr {
+		padding: 1.5rem 0;
+		margin-top: 5px;
+	}
+
+	hr:before {
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.heading {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.scroll-bar {
+		display: none;
+	}
+
+	p {
+		font-size: 0.95rem;
+	}
+
+	.heading {
+		font-size: 1.1rem;
+	}
+
+	.container {
+		padding: 0 0.5rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	body {
+		font-size: 0.8rem;
+	}
+
+	p {
+		font-size: 0.9rem;
+	}
+}

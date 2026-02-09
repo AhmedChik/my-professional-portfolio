@@ -1,0 +1,282 @@
+.formations {
+	min-height: 100vh;
+	display: flex;
+	padding: 2rem 4rem;
+}
+
+.formations .title {
+	margin-top: 6rem;
+}
+
+.formations>div {
+	width: 50%;
+	padding: 1rem;
+}
+
+.formations p {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	line-height: 1.5rem;
+}
+
+.formations .timeline {
+	padding-left: 3rem;
+	position: relative;
+	font-size: 1.1rem;
+	margin-top: 2rem;
+}
+
+.formations .timeline>h1 {
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+
+.formations .timeline::after {
+	position: absolute;
+	content: '';
+	top: 60px;
+	left: 35px;
+	width: 2px;
+	height: calc(100% - 60px);
+	background-color: #4F7CFF;
+}
+
+.formations .timeline>ul {
+	list-style-type: none;
+}
+
+.formations .timeline li {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.formations .timeline-item {
+	position: relative;
+}
+
+.formations .timeline-list {
+	padding-left: 2rem;
+}
+
+.formations .timeline-description {
+	margin-block: 1rem;
+}
+
+.formations .timeline-item::before {
+	position: absolute;
+	content: '';
+	top: 6px;
+	left: -53px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 2px solid #4F7CFF;
+	background-color: #12182B;
+	z-index: 99;
+}
+
+.formations .designation {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.formations .place {
+	color: #4F7CFF;
+	letter-spacing: 0.1rem;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.formations .intro {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: #fff;
+	background: linear-gradient(to top right, #ffffff00, rgba(79, 124, 255, 0.15));
+	padding: 1.5rem 3rem;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.formations .intro p {
+	margin-block: 0.4rem;
+	line-height: 1.8rem;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.formations .intro strong {
+	color: #4F7CFF;
+	font-weight: 600;
+}
+
+.formations .timeline-description ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.formations .timeline-description li {
+	padding: 0.5rem 0;
+	padding-left: 1.5rem;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.formations .timeline-description li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: #4F7CFF;
+	font-weight: bold;
+}
+
+.formations .timeline-description strong {
+	color: #4F7CFF;
+	font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+	.formations {
+		padding: 2rem 2.5rem;
+	}
+
+	.formations>div {
+		padding: 0.8rem;
+	}
+
+	.formations .timeline>h1 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.formations {
+		padding: 2rem 1.5rem;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		text-align: center;
+	}
+
+	.formations .designation {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.formations .timeline>h1 {
+		font-size: 1.8rem;
+	}
+
+	.formations>div {
+		width: 100%;
+		padding: 0;
+	}
+
+	.formations .intro {
+		padding: 1.5rem 1rem;
+		font-size: 1.15rem;
+	}
+
+	.formations .intro p {
+		margin-block: 0.3rem;
+		font-size: 1.15rem;
+		line-height: 1.6rem;
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+	.formations .place {
+		font-size: 1rem;
+		letter-spacing: 0.05rem;
+	}
+
+	.formations .timeline {
+		padding-left: 2rem;
+	}
+
+	.formations .timeline-item::before {
+		left: -40px;
+	}
+
+	.formations .timeline::after {
+		left: 27px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.formations {
+		padding: 1.5rem 1rem;
+		gap: 1rem;
+	}
+
+	.formations .timeline>h1 {
+		font-size: 1.5rem;
+	}
+
+	.formations .designation {
+		font-size: 1rem;
+	}
+
+	.formations .intro {
+		padding: 1rem 0.8rem;
+		font-size: 1rem;
+	}
+
+	.formations .intro p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	.formations .timeline {
+		font-size: 1rem;
+		padding-left: 1.5rem;
+	}
+
+	.formations .timeline-description li {
+		font-size: 0.95rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.formations {
+		padding: 1rem;
+	}
+
+	.formations .designation {
+		font-size: 0.9rem;
+	}
+
+	.formations .timeline>h1 {
+		font-size: 1.3rem;
+	}
+
+	.formations .intro p {
+		font-size: 0.95rem;
+	}
+
+	.formations .place {
+		font-size: 0.85rem;
+	}
+
+	.formations .timeline {
+		padding-left: 1.2rem;
+	}
+
+	.formations .timeline-item::before {
+		width: 10px;
+		height: 10px;
+		left: -32px;
+		top: 4px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.formations .timeline>h1 {
+		font-size: 1.1rem;
+	}
+
+	.formations .intro p {
+		font-size: 0.9rem;
+	}
+}

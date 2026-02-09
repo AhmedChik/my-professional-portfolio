@@ -1,0 +1,315 @@
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2.5rem;
+	position: relative;
+}
+
+.hero-section .name {
+	font-size: 4rem;
+	margin-right: 20px;
+	color: #4F7CFF;
+}
+
+.main-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	width: 100%;
+	max-width: 1000px;
+	padding: 2rem;
+}
+
+
+
+.hero-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-photo {
+	width: 80%;
+	max-width: 350px;
+	height: auto;
+	border-radius: 100%;
+	box-shadow: 0 0 30px rgba(79, 124, 255, 0.3);
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 50px rgba(79, 124, 255, 0.5);
+}
+
+.blur {
+	height: 12rem;
+	width: 12rem;
+	background-color: hsl(196, 100%, 56%, 0.7);
+	filter: blur(100px);
+	border-radius: 100px;
+	z-index: -1;
+	position: absolute;
+}
+
+.bottom-bar {
+	border-radius: 13px;
+	color: var(--primaryFg);
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 20px;
+	gap: 20px;
+}
+
+/* Resume Button */
+.resume-btn {
+	background: linear-gradient(135deg, rgba(79, 124, 255, 0.15), rgba(79, 124, 255, 0.05));
+	border: 2px solid rgba(79, 124, 255, 0.4);
+	color: #4F7CFF;
+	padding: 0.8rem 1.8rem;
+	border-radius: 12px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	position: relative;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+.resume-btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(79, 124, 255, 0.2), rgba(79, 209, 255, 0.1));
+	transition: left 0.3s ease;
+	z-index: -1;
+}
+
+.resume-btn:hover {
+	background: linear-gradient(135deg, rgba(79, 124, 255, 0.2), rgba(79, 124, 255, 0.1));
+	border-color: #4F7CFF;
+	box-shadow: 0 0 20px rgba(79, 124, 255, 0.5), inset 0 0 10px rgba(79, 124, 255, 0.2);
+	color: #4FD1FF;
+	transform: translateY(-3px);
+}
+
+.resume-btn:active {
+	transform: translateY(-1px);
+}
+
+.github-ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 50px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(45deg) translate(50%, 150%);
+	transform-origin: top right;
+	z-index: 9999;
+	background-color: transparent;
+	color: inherit;
+}
+
+/* The glowing panel (matches your floating button style) */
+.github-ribbon div {
+	width: 100%;
+	height: 100%;
+	border-radius: 13px;
+	background-color: var(--primaryBg);
+	box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+	color: var(--primaryFg);
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: all 0.25s ease;
+}
+
+/* Glow effect */
+.github-ribbon span {
+	width: 100px;
+	height: 60px;
+	background-color: var(--primaryHi);
+	border-radius: 100%;
+	filter: blur(20px);
+	position: absolute;
+	bottom: -50%;
+	transition: all 0.25s ease;
+}
+
+.github-ribbon:hover>span {
+	bottom: -40%;
+	filter: blur(18px);
+	scale: 1.2;
+}
+
+.github-ribbon:hover>div {
+	transform: translateY(4px);
+}
+
+/* 🔹 Responsive tweak */
+@media screen and (max-width: 1024px) {
+	.hero-section {
+		font-size: 2.2rem;
+		min-height: 90vh;
+	}
+
+	.hero-section .name {
+		font-size: 3.5rem;
+	}
+
+	.main-hero {
+		gap: 2.5rem;
+		padding: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero-section {
+		font-size: 1.8rem;
+		min-height: 85vh;
+		padding-top: 70px;
+	}
+
+	.hero-section .name {
+		font-size: 3rem;
+		margin: 0 15px;
+	}
+
+	.main-hero {
+		flex-direction: column;
+		gap: 1.5rem;
+		padding: 1.5rem 1rem;
+	}
+
+	.hero-image {
+		order: -1;
+	}
+
+	.profile-photo {
+		max-width: 250px;
+	}
+
+	.bottom-bar {
+		gap: 10px;
+		flex-wrap: wrap;
+		bottom: 10px;
+	}
+
+	.resume-btn {
+		padding: 0.65rem 1.3rem;
+		font-size: 0.85rem;
+	}
+
+	.blur {
+		height: 8rem;
+		width: 8rem;
+		filter: blur(80px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.github-ribbon div {
+		font-size: 0.65rem;
+	}
+
+	.hero-section {
+		font-size: 1.5rem;
+		min-height: 80vh;
+	}
+
+	.hero-section .name {
+		font-size: 2.2rem;
+		margin: 0 10px;
+	}
+
+	.main-hero {
+		padding: 1rem;
+		gap: 1.2rem;
+	}
+
+	.profile-photo {
+		max-width: 200px;
+	}
+
+	.resume-btn {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.8rem;
+		gap: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hero-section {
+		font-size: 1.3rem;
+		min-height: 75vh;
+	}
+
+	.hero-section .name {
+		font-size: 1.8rem;
+		margin: 0;
+	}
+
+	.main-hero {
+		padding: 0.8rem;
+		gap: 1rem;
+	}
+
+	.profile-photo {
+		max-width: 150px;
+	}
+
+	.bottom-bar {
+		gap: 5px;
+		flex-direction: column;
+	}
+
+	.resume-btn {
+		padding: 0.5rem 1rem;
+		font-size: 0.75rem;
+		gap: 0.3rem;
+	}
+
+	.blur {
+		height: 5rem;
+		width: 5rem;
+		filter: blur(60px);
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.hero-section .name {
+		font-size: 1.5rem;
+	}
+
+	.bottom-bar {
+		gap: 3px;
+	}
+
+	.resume-btn {
+		padding: 0.4rem 0.8rem;
+		font-size: 0.7rem;
+	}
+}
