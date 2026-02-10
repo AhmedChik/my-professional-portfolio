@@ -138,5 +138,9 @@
 	background-color: var(--accentHi);
 }
 
-
-
+/* Responsive - Hide floating buttons on mobile */
+@media screen and (max-width: 1024px) {
+	.floating-btn {
+		display: none;
+	}
+}

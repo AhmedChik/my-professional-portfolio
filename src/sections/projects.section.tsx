@@ -33,36 +33,48 @@ const projects: Project[] = [
 			'QualiGen is a web and mobile extranet platform developed for educational institutions in compliance with the Qualiopi framework. The platform allows learners to access documents, sign files electronically, and interact with trainers. Built with Next.js and Expo on the frontend, NestJS on the backend, PostgreSQL with Prisma for data management, and secure authentication via Clerk. The project was developed using Agile Scrum methodology.',
 	},
 	{
-	id: 2,
-	title: 'TradeSense AI',
-	shortDescription: 'AI-powered Prop Trading SaaS platform',
-	description:
-		'An AI-assisted prop trading platform combining real-time market data, trading challenges, and smart risk management.',
-	technologies: [
-		'React',
-		'Python',
-		'Flask',
-		'PostgreSQL',
-		'TradingView Charts',
-		'yfinance',
-		'BeautifulSoup',
-		'REST API',
-	],
-	image: '/project/TradeIA 1.png',
-	images: [
-		'/project/TradeIA 1.png',
-		'/project/TradeIA 2.png',
-		'/project/TradeIA 3.png',
-		'/project/TradeIA 4.png',
-	],
-	github: 'https://github.com/AhmedChik/tanstradIA',
-	live: 'https://tradesenseia-plateforme-manda.onrender.com/',
-	details:
-		'TradeSense AI is an AI-powered prop trading SaaS platform designed to train and evaluate traders through simulated trading challenges using real-time market data. The platform integrates live international and Moroccan market prices, AI-assisted trading signals, and strict risk management rules. Users pay to access trading challenges and become "Funded" by reaching profit targets without violating loss constraints. The system includes real-time dashboards, automated challenge evaluation, mock and PayPal-based payments, community features, and a learning center. Built with a React frontend and a Flask backend using RESTful APIs, PostgreSQL for persistence, and data feeds from Yahoo Finance and web scraping.',
-},
-
+		id: 2,
+		title: 'TradeSense AI',
+		shortDescription: 'AI-powered Prop Trading SaaS platform',
+		description:
+			'An AI-assisted prop trading platform combining real-time market data, trading challenges, and smart risk management.',
+		technologies: [
+			'React',
+			'Python',
+			'Flask',
+			'PostgreSQL',
+			'TradingView Charts',
+			'yfinance',
+			'BeautifulSoup',
+			'REST API',
+		],
+		image: '/project/TradeIA 1.png',
+		images: [
+			'/project/TradeIA 1.png',
+			'/project/TradeIA 2.png',
+			'/project/TradeIA 3.png',
+			'/project/TradeIA 4.png',
+		],
+		github: 'https://github.com/AhmedChik/tanstradIA',
+		live: 'https://tradesenseia-plateforme-manda.onrender.com/',
+		details:
+			'TradeSense AI is an AI-powered prop trading SaaS platform designed to train and evaluate traders through simulated trading challenges using real-time market data. The platform integrates live international and Moroccan market prices, AI-assisted trading signals, and strict risk management rules. Users pay to access trading challenges and become "Funded" by reaching profit targets without violating loss constraints. The system includes real-time dashboards, automated challenge evaluation, mock and PayPal-based payments, community features, and a learning center. Built with a React frontend and a Flask backend using RESTful APIs, PostgreSQL for persistence, and data feeds from Yahoo Finance and web scraping.',
+	},
 	{
 		id: 3,
+		title: 'My Portfolio',
+		shortDescription: 'Personal portfolio website showcasing projects and skills',
+		description: 'A modern portfolio website built with React and TypeScript, featuring project showcase, technical skills, and interactive components.',
+		technologies: ['React', 'TypeScript', 'Vite', 'CSS3', 'Responsive Design'],
+		image: '/project/Portfolio 1.png',
+		images: ['/project/Portfolio 1.png', '/project/Portfolio 2.png', '/project/Portfolio 3.png'],
+		github: 'https://github.com/AhmedChik/my-professional-portfolio',
+		live: 'https://my-professional-portfolio-eight-sand.vercel.app/',
+		details: 'My personal portfolio website showcasing my professional projects, technical skills, and experience as a full-stack developer. Built with React and TypeScript, featuring modern UI components, smooth animations, and a responsive design. The site includes sections for projects, experience, education, and contact information.',
+	},
+
+	{
+		id: 4,
 		title: 'TaskCOMARKE',
 		shortDescription: 'Internal task and project management web application',
 		description:
@@ -76,7 +88,7 @@ const projects: Project[] = [
 			'TaskCOMARKE is an internal management web application developed for COMARKE. It enables teams to manage client tasks and monitor project progress efficiently. The frontend was built using React.js, while the backend relies on Spring Boot with a relational database. The project involved requirements analysis, functional specification writing, and Agile Scrum-based teamwork.',
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'P2E Learning Platform',
 		shortDescription: 'Academic platform for managing student project calls',
 		description:
